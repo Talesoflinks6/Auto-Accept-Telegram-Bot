@@ -19,7 +19,7 @@ async def handle_start(bot: Client, message: Message):
     text = f"Hi, {message.from_user.mention}\n\n I'm Auto Accept Bot I can accpet user from any channel and group just make me admin there."
     reply_markup = InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton(text="Developer 👨‍💻", url="https://t.me/Snowball_Official")],
+            [InlineKeyboardButton(text="Developer 👨‍💻", url="https://t.me/Botadmin44")],
             [InlineKeyboardButton("Help", callback_data="help")],
         ]
     )
@@ -34,7 +34,7 @@ async def handle_start(bot: Client, message: Message):
         if message.from_user.id == Config.ADMIN:
             await SnowDev.edit(text=text, reply_markup=reply_markup)
         else:
-            await SnowDev.edit(text=text, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Developer 👨‍💻", url="https://t.me/Snowball_Official")]]))
+            await SnowDev.edit(text=text, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Developer 👨‍💻", url="https://t.me/Botadmin44")]]))
 
 
 @Client.on_message(filters.private & filters.command("set_welcome") & filters.user(Config.ADMIN))
