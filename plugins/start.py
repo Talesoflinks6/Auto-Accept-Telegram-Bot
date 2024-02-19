@@ -34,7 +34,7 @@ async def handle_start(bot: Client, message: Message):
         if message.from_user.id == Config.ADMIN:
             await SnowDev.edit(text=text, reply_markup=reply_markup)
         else:
-            await SnowDev.edit(text=text, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Developer 👨‍💻", url="https://t.me/Botadmin44")]]))
+            await SnowDev.edit(text=text, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Developer 👨‍💻", url="https://t.me/Snowball_Official")]]))
 
 
 @Client.on_message(filters.private & filters.command("set_welcome") & filters.user(Config.ADMIN))
